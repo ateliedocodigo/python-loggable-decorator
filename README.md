@@ -14,7 +14,7 @@ USAGE
 
 Decorate methods that you want to get logger like [example](examples/example-1.py)
 
-```
+```python
 # -*- coding: utf-8 -*-
 
 from loggable import loggable_method as loggable

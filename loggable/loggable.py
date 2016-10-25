@@ -2,7 +2,9 @@
 import logging
 from functools import wraps
 
-def loggable(name):
+__all__ = ['loggable_method']
+
+def loggable_method(name):
     """
     Wraps a method to set logger on self.logger
     """

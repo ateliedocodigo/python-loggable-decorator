@@ -1,14 +1,27 @@
 # -*- coding: utf-8 -*-
+import logging
+import sys
+
+# this is just an example config
+logging.basicConfig(
+    stream=sys.stdout,
+    level=logging.DEBUG
+)
 
 from loggable import loggable_method as loggable
 
 class Example1(object):
     @loggable(__name__)
-    def decoratedmethod(self):
-        self.logger.debug("Debug this")
+    def decorated_method_with_name(self):
+        self.logger.debug("Debug decorated_method_with_name")
         print("This is a decorated method")
 
-    def undecoratedmethod(self):
+    @loggable
+    def decorated_method_without_name(self):
+        self.logger.debug("Debug decorated_method_without_name")
+        print("This is a decorated method")
+
+    def undecorated_method(self):
         print("This is an undecorated method")
         try:
             self.logger.debug("This trows an error")
@@ -17,5 +30,6 @@ class Example1(object):
 
 
 if __name__ == "__main__":
-    Example1().decoratedmethod()
-    Example1().undecoratedmethod()
+    Example1().decorated_method_with_name()
+    Example1().decorated_method_without_name()
+    Example1().undecorated_method()

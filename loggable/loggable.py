@@ -26,8 +26,5 @@ def loggable_method(name):
 
 
 def loggable_class(Cls):
-    import inspect, types
-    for name, fn in inspect.getmembers(Cls):
-        if isinstance(fn, types.BuiltinMethodType):
-            setattr(Cls, name, loggable_method(fn))
+    Cls.logger = property(lambda self: logging.getLogger(self.__module__))
     return Cls

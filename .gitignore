@@ -6,6 +6,9 @@ MANIFEST
 __pycache__/
 *.py[cod]
 
+# Also don't include .pyc filse
+*.pyc
+
 # C extensions
 *.so
 
@@ -119,3 +122,4 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+

@@ -1,9 +1,16 @@
 # -*- coding: utf-8 -*-
 import logging
 from functools import wraps
+import inspect
 
-__all__ = ['loggable_class', 'loggable_method']
+__all__ = ['loggable_class', 'loggable_method', 'loggable']
 
+
+def loggable(param):
+    if inspect.isclass(param):
+        return loggable_class(param)
+    else:
+        return loggable_method(param)
 
 def loggable_method(name):
     """

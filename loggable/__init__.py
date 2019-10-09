@@ -1,2 +1,2 @@
 # -*- coding: utf-8 -*-
-from loggable.loggable import *
+from .loggable import *

@@ -25,7 +25,7 @@ def loggable_method(name):
                 _self.logger = logging.getLogger(
                     name if isinstance(name, str) else _self.__module__
                 )
-            except Exception as e:
+            except Exception:
                 pass
             result = func(*args, **kw)
             return result

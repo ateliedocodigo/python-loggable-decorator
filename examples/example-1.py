@@ -1,14 +1,11 @@
 # -*- coding: utf-8 -*-
+from loggable import loggable_method as loggable
 import logging
 import sys
 
 # this is just an example config
-logging.basicConfig(
-    stream=sys.stdout,
-    level=logging.DEBUG
-)
+logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
 
-from loggable import loggable_method as loggable
 
 class Example1(object):
     @loggable(__name__)

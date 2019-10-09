@@ -1,7 +1,7 @@
 import sys
 from unittest import TestCase
 
-from loggable import loggable_class, loggable_method, loggable
+from loggable.loggable import loggable, loggable_class, loggable_method
 
 
 @loggable_class

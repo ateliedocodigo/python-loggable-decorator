@@ -1,4 +1,8 @@
-# Python Loggable Decorator [![PyPI version](https://badge.fury.io/py/loggable-decorator.svg)](https://badge.fury.io/py/loggable-decorator)
+# Python Loggable Decorator
+
+[![PyPI version](https://badge.fury.io/py/loggable-decorator.svg)](https://badge.fury.io/py/loggable-decorator)
+
+
 Add a logger attribute to class decorated
 
 Installation

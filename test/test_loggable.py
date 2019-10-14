@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from loggable.loggable import loggable, loggable_class, loggable_method
+from loggable import loggable, loggable_class, loggable_method
 
 
 @loggable_class

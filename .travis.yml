@@ -1,14 +1,11 @@
+sudo: false
 language: python
 notifications:
   email:
     on_success: never
     on_failure: always
 python:
+  - "3.6"
   - "3.7"
-  # PyPy versions
-  - "pypy3"  # currently Python 3.6.1,  PyPy 7.1.1-beta0
-# command to install dependencies
-install:
-  - pip install flake8
-  - pip install .
-script: flake8 . && python -m unittest
+install: pip install tox-travis
+script: tox
